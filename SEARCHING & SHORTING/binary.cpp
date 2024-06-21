@@ -1,13 +1,12 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int search2(vector<int> v,int target){
+int search2(vector<int>& v,int target){
     int start = 0;
     int end = v.size()-1;
-    while(start<end){
+    while(start<=end){
         int mid = start+(end-start)/2;
         if(v[mid]==target){
-            cout<<v[mid]<<endl;
             return v[mid];
         }
         else if(v[mid]>target){
