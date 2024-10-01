@@ -1,6 +1,0 @@
-print("HI I am priyo😊")
-print("But my full name is Priyobroto Karmakar")
-print("But my full name is")
-print("But my is Priyobroto Karmakar")
-print("But my ful Priyobroto Karmakar")
-print("B name is Priyobroto Karmakar")

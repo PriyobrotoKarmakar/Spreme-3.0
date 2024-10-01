@@ -10,18 +10,21 @@ int power(int n){
     return ans;
 }
 int main(){
-    int n=231;
-    int ans = 0,i=0;
-    while(n>0){
-        int digit = n%10;
-        cout<<ans<<" "<<digit<<endl;
-        int check = digit*pow(10,i);
-        cout<<check<<endl;
-        ans+= check;
-        cout<<pow(10,i)<<" "<<ans<<endl;;
-        n/=10;
-        i++;
-    }
-    cout<<ans;
+    int arr[3]={1,2};
+    cout<<arr[0];
+    // int n=231;
+    // int ans = 0,i=0;
+    // while(n>0){
+    //     int digit = n%10;
+    //     cout<<ans<<" "<<digit<<endl;
+    //     int check = digit*pow(10,i);
+    //     cout<<check<<endl;
+    //     ans+= check;
+    //     cout<<pow(10,i)<<" "<<ans<<endl;;
+    //     n/=10;
+    //     i++;
+    // }
+    double n = 90;
+    // printf("%.6af",n);
     return 0;
 }

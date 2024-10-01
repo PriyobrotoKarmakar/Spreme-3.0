@@ -24,5 +24,6 @@ if(carry==1){
     for(int it: ans){
         cout<<it<<" ";
     }
+    
     return 0;
 }
