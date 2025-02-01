@@ -14,6 +14,8 @@ public:
     }
     void heapifyUp(int child)
     {
+        //time complexity of heapifyUp is O(logn) because
+        //it is going to the height of the tree
         while (child > 1)
         {
             int parent = child / 2;
@@ -28,6 +30,25 @@ public:
             child = parent;
         }
     }
+    void heapifyDown(int parent)
+    {
+        //time complexity of heapifyDown is O(logn) because 
+        //it is going to the height of the tree
+        int left = 2 * parent;
+        int right = 2 * parent + 1;
+        int largest = parent;
+        if (left <= index && arr[left] > arr[largest])
+            largest = left;
+        if (right <= index && arr[right] > arr[largest])
+            largest = right;
+
+        if (largest != parent)
+        {
+            swap(arr[parent], arr[largest]);
+            heapifyDown(largest);
+        }
+    }
+
     void insert(int data)
     {
         if (index == capacity - 1)
@@ -38,6 +59,17 @@ public:
         index++;
         arr[index] = data;
         heapifyUp(index);
+    }
+    void remove()
+    {
+        if (index == 0)
+        {
+            cout << "Heap is empty" << endl;
+            return;
+        }
+        arr[1] = arr[index];
+        index--;
+        heapifyDown(1);
     }
 
     void printingHeap()
@@ -64,5 +96,25 @@ int main()
     h.insert(90);
     h.insert(100);
     h.printingHeap();
+
+    h.remove();
+    h.printingHeap();
+    h.remove();
+    h.printingHeap();
+    h.remove();
+    h.printingHeap();
+    h.remove();
+    h.printingHeap();
+    h.remove();
+    h.printingHeap();
+    h.remove();
+    h.printingHeap();
+    h.remove();
+    h.printingHeap();
+    h.remove();
+    h.printingHeap();
+    h.remove();
+    h.printingHeap();
+    h.remove();
     return 0;
 }
